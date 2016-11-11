@@ -14,29 +14,28 @@ Mopidy-libNotify
    :target: https://coveralls.io/r/Mellich/mopidy-libnotify
    :alt: Test coverage
 
-adds notifications using lib notify
+Adds notifications using libnotify. Supports artist, track title and album cover in notification.
 
 
 Installation
 ============
 
-Install by running::
+Unfortunately, this extentions isn't available over pip, yet.
+To install it on your system, clone the repository and switch into the direcotry.
+Run the install script with::
 
-    pip install Mopidy-libNotify
+    python setup.py install
 
-Or, if available, install the Debian/Ubuntu package from `apt.mopidy.com
-<http://apt.mopidy.com/>`_.
-
+This should install the extention globally on your system and integrate in mopidy.
 
 Configuration
 =============
 
-Before starting Mopidy, you must add configuration for
-Mopidy-libNotify to your Mopidy configuration file::
+Currently, no further configuration is necessary.
+Like every other extention it can be disabled by setting::
 
     [libnotify]
-    # TODO: Add example of extension config
-
+    enabled = false
 
 Project resources
 =================
@@ -55,6 +54,12 @@ Credits
 
 Changelog
 =========
+
+v0.2.0 (UNRELEASED)
+----------------------------------------
+
+- added image support
+- downloads the image to the ``/tmp/`` folder, if it is an URL
 
 v0.1.0 (UNRELEASED)
 ----------------------------------------
